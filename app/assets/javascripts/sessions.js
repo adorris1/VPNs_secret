@@ -18,19 +18,19 @@ $(document).ready(function() {
     })
   };
 
-  var checkForOneTouch = function() {
-    $.get( "/authy/status", function(data) {
-      
-      if (data == 'approved') {
-        window.location.href = "/account";
-      } else if (data == 'denied') {
-        showTokenForm();
-        triggerSMSToken();
-      } else {
-        setTimeout(checkForOneTouch, 2000);
-      }
-    })
-  };
+    var checkForOneTouch = function() {
+        var source = new EventSource("/authy/live_status")
+        source.addEventListener("authy_status", function(event) {
+            var data = JSON.parse(event.data);
+            if (data.status === "approved") {
+                source.close();
+                window.location.href = "/account";
+            } else if (data.status === "denied") {
+                showTokenForm();
+                triggerSMSToken();
+            }
+        })
+    };
 
   var showTokenForm = function() {
     $('.auth-ot').fadeOut(function() {

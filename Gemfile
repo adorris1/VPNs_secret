@@ -30,8 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'authy', :git => 'https://github.com/authy/authy-ruby.git'
 
 # Use Unicorn as the app server
-gem 'unicorn'
-
+#gem 'unicorn'
+gem 'puma'
 group :production do
   gem 'rails_12factor'
 end
