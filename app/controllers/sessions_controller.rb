@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       # Try to verify with OneTouch
       one_touch = Authy::OneTouch.send_approval_request(
         id: @user.authy_id,
-        message: "Request to Login to Twilio demo app",
+        message: "Request to Login to Ashley's Super Secret VPN",
         details: {
           'Email Address' => @user.email,
         }
