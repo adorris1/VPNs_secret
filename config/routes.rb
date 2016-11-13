@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resource :vpn_sessions, only: [:new, :create]
   # Account section
   resource :account, only: [:show]
 
@@ -16,6 +18,8 @@ Rails.application.routes.draw do
   # Create users
   resources :users, only: [:new, :create]
 
-  # Home page
-  root 'main#index'
+
+# resources :vpnsessions, only: [:new, :create]
+# Home page
+root 'main#index'
 end

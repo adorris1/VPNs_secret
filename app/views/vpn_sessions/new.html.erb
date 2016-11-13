@@ -1,0 +1,24 @@
+<h1>VPN Gateway</h1>
+<p> Enter VPN settings provided by your administration</p>
+
+<%= form_for @vpnsession do |f| %>
+    <div class="form-group">
+      <%= f.label :account_name, "Vpn Account Name:" %>
+      <%= f.text_field :account_name, class: "form-control", placeholder: "ashleymacbookpro" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :shared_secret, "Shared Secret:" %>
+      <%= f.text_field :shared_secret, class: "form-control", placeholder: "Wht5mps17p" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :server_address, "VPN Server Address:" %>
+      <%= f.text_field :server_address, class: "form-control" , placeholder: "xxx.xxx.x.xx" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :vpn_pw, "account password:" %>
+      <%= f.text_field :vpn_pw, class: "form-control" %>
+    </div>
+
+    <button class="btn btn-primary">Connet</button>
+<% end -%>
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shared_secret: MyString
+  server_address: MyString
+  account_name: MyString
+  vpn_pw: MyString
+
+two:
+  shared_secret: MyString
+  server_address: MyString
+  account_name: MyString
+  vpn_pw: MyString

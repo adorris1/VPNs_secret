@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014174632) do
+ActiveRecord::Schema.define(version: 20161112221756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20151014174632) do
     t.string   "authy_id"
     t.integer  "authy_status",    default: 0, null: false
     t.string   "uuid"
+  end
+
+  create_table "vpn_sessions", force: :cascade do |t|
+    t.string   "shared_secret"
+    t.string   "server_address"
+    t.string   "account_name"
+    t.string   "vpn_pw"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
