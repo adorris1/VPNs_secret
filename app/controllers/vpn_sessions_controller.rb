@@ -19,7 +19,7 @@ class VpnSessionsController < ApplicationController
   private
 
   def vpn_params
-    params.require(:vpnsession).permit(
+    params.require(:vpn_session).permit(
         :shared_secret, :server_address, :account_name, :vpn_pw
     )
   end
