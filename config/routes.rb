@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resource :vpn_sessions, only: [:new, :create]
+  resource :vpn_sessions, only: [:new, :create, :show]
   # Account section
   resource :account, only: [:show]
 

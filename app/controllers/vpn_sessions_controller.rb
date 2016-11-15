@@ -9,7 +9,7 @@ class VpnSessionsController < ApplicationController
   def create
     @vpnsession = VpnSession.new(vpn_params)
     if @vpnsession.save
-      redirect_to account_path
+      redirect_to vpn_sessions_path
     else
       render :new
     end

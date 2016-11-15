@@ -1,12 +1,15 @@
-<h1>"Connection Sucessful"</h1>
-<div class="row">
-  <aside class="col-md-4">
-    <section>
-      <h1>
-        Connection start: <%= Time.now.strftime('%A') %>
-        <%=@vpnsession.account_name%>
-        <%=@vpnsession.server_address %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<h1>Connection Sucessful</h1>
+<table>
+  <tr>
+    <th>Connection Start</th>
+    <td><%= Time.now %></td>
+  </tr>
+  <tr>
+    <th>Account</th>
+    <td><%= @vpnsession.account_name %></td>
+  </tr>
+  <tr>
+    <th>Server Address</th>
+    <td><%= @vpnsession.server_address %></td>
+  </tr>
+</table>
