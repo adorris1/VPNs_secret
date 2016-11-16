@@ -14,8 +14,9 @@
   <section id="main" class="container">
     <!-- Nav Bar -->
     <nav class="navbar navbar-default">
-      <%=image_tag("icon.png", height: 50, width: 50, align: 'left') %>
-      <a class="navbar-brand" href="/">Network Security Gateway</a>
+      <%=image_tag("fullLogo.png", height: 45, width: 165, align: 'left') %>
+      <a class="navbar-brand" href="/"></a>
+
       <p id="nav-links" class="navbar-text pull-right">
         <% if signed_in? %>
           Welcome back <%= link_to current_user.name, account_path %>!
