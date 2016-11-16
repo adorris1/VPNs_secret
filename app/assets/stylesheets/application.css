@@ -170,4 +170,23 @@ p {
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    color: #e88608;
+}
+
+
+#override div.form-group {
+    display: block;
+}
+
+#override form.new_vpn_session {
+    display: block;
+}
+
+#override label {
+    display: inline;
+}
+
+#override input.form-control {
+    display: inline;
+    width: 50%;
 }
