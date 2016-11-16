@@ -91,3 +91,21 @@ td {
     line-height: 1;
     color: #e88608;
 }
+
+
+#override div.form-group {
+    display: block;
+}
+
+#override form.new_vpn_session {
+    display: block;
+}
+
+#override label {
+    display: inline;
+}
+
+#override input.form-control {
+    display: inline;
+    width: 50%;
+}
