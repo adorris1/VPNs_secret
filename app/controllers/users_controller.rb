@@ -15,7 +15,8 @@ class UsersController < ApplicationController
       )
       @user.update(authy_id: authy.id)
       
-      redirect_to account_path
+      redirect_to new_session_path
+
     else
       render :new
     end
