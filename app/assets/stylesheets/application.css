@@ -35,10 +35,20 @@ footer i {
 }
 
 nav a:focus {
-    text-decoration:none;
     color:#337ab7;
+    text-align: center;
+    text-decoration: none;
+}
+a.navbar-brand {
+    padding-left: 0;
 }
 
+
+img {
+    display: inline-block;
+    height: 100%;
+    padding: 10px;
+}
 td {
     padding:10px;
 }
@@ -75,4 +85,9 @@ td {
 }
 .auth-ot, .auth-token {
     display:none;
+}
+
+#bootstrap-overrides a { /* 100+1=101 priority score, yay! */
+    line-height: 1;
+    color: #e88608;
 }

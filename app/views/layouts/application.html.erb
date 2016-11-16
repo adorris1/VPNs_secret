@@ -10,11 +10,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="bootstrap-overrides">
   <section id="main" class="container">
     <!-- Nav Bar -->
     <nav class="navbar navbar-default">
-      <%=image_tag("fullLogo.png", :align=> "left",:style=>'  height:75, width:100, float: left') %>
+      <%=image_tag("icon.png", height: 50, width: 50, align: 'left') %>
       <a class="navbar-brand" href="/">Network Security Gateway</a>
       <p id="nav-links" class="navbar-text pull-right">
         <% if signed_in? %>

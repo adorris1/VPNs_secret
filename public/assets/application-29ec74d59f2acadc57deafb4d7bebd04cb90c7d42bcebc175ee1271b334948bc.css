@@ -77,3 +77,10 @@ td {
 .auth-ot, .auth-token {
     display:none;
 }
+
+
+
+a {
+    color: #e88608 !important;
+    text-decoration: none;
+}
