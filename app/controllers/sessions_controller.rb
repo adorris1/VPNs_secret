@@ -18,7 +18,6 @@ class SessionsController < ApplicationController
       )
       status = one_touch['success'] ? :onetouch : :sms
       @user.update(authy_status: status)
-
       # Respond to the ajax call that requested this with the approval request body
       render json: { success: one_touch['success'] }
     else

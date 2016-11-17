@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates :country_code, presence: true
   validates :phone_number, presence: true
   after_save :notify_authy_status_change
+  validates :password, presence: true, length: { minimum: 6 }
 
   def self.clean_sql(query)
     sanitize_sql(query)

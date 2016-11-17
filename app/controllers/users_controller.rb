@@ -14,9 +14,7 @@ class UsersController < ApplicationController
         country_code: @user.country_code
       )
       @user.update(authy_id: authy.id)
-      
-      redirect_to new_session_path
-
+      redirect_to account_path
     else
       render :new
     end
